@@ -18,8 +18,8 @@ import subprocess
 import numpy as np
 import soundfile as sf
 import requests
-from google import genai
-from google.genai import types # Need types for Content/Part/Config/SafetySetting
+import google.generativeai as genai
+# Import types for Content/Part/Config/SafetySetting
 from IPython.display import display, Image, Audio, HTML
 from PIL import Image as PILImage
 from kokoro import KPipeline
