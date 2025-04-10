@@ -25,19 +25,17 @@ jobs:
         pip install ipython google-api-python-client google-auth google-auth-oauthlib google-auth-httplib2
         
     - name: Set up Gemini API Key
-      env:
-        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       run: |
-        echo "GEMINI_API_KEY is set: ${GEMINI_API_KEY:0:1}...${GEMINI_API_KEY: -4}"
+        # Using one of the provided API keys
+        echo "GEMINI_API_KEY=AIzaSyAqbqE86FKFXS6t5qrpXJVj9jAf-arQ1Js" >> $GITHUB_ENV
+        echo "GEMINI_API_KEY is set"
         
     - name: Run Story Generator
-      env:
-        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       run: |
         python story_generator_standalone.py
         
     - name: Archive story outputs
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: story-output
         path: |
