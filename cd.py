@@ -1,9 +1,10 @@
-# 1. Install required libraries
-!pip install -q google-generativeai IPython
-!pip install -q pillow
-!pip install -q google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client
-!pip install -q kokoro>=0.9.2 soundfile
-!apt-get -qq -y install espeak-ng > /dev/null 2>&1
+# 1. Import libraries
+# Note: These dependencies should be installed via pip before running this script
+# - google-generativeai
+# - IPython
+# - pillow
+# - google-auth, google-auth-oauthlib, google-auth-httplib2, google-api-python-client
+# - kokoro, soundfile
 
 # 2. Import libraries
 import os
