@@ -19,7 +19,7 @@ import numpy as np
 import soundfile as sf
 import requests
 import google.generativeai as genai
-# Import types for Content/Part/Config/SafetySetting
+from google.generativeai import types
 from IPython.display import display, Image, Audio, HTML
 from PIL import Image as PILImage
 from kokoro import KPipeline
